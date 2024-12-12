@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #000;
+}
+
+$lightGray: rgb(150, 151, 156);
+$redText: #eb0000;
+
+.border {
+  border: 1px solid rgb(38, 38, 38);
+}
+
+.header {
+  backdrop-filter: blur(100px);
+  background-color: rgba(15, 15, 15, 0.65);
+  border-radius: 50px;
+  opacity: 1;
+}
+.banner {
+  background: url(./assets/img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.black-opacity {
+  background-color: #000;
+  flex: none;
+  height: 100%;
+  left: calc(50.00000000000002% - 100% / 2);
+  opacity: 0.6;
+  overflow: hidden;
+  position: absolute;
+  top: calc(50.00000000000002% - 100% / 2);
+  width: 100%;
+  z-index: 1;
+}
