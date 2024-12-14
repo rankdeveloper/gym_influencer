@@ -7,6 +7,8 @@ import Animated_Text from "./components/text-animation";
 import Misson from "./components/misson";
 import VideoCard from "./components/videoCard";
 import Services from "./components/ourServices";
+import Benefits from "./components/benefits";
+import Vertical_Slider from "./components/slider";
 
 export default function App() {
   return (
@@ -30,6 +32,8 @@ export default function App() {
         <Misson />
         <VideoCard />
         <Services />
+        <Benefits />
+        <Vertical_Slider />
       </div>
     </>
   );
