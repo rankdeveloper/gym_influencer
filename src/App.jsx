@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Trusted_user from "./components/trusted_user";
 import Animated_Text from "./components/text-animation";
 import Misson from "./components/misson";
+import VideoCard from "./components/videoCard";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           </div>
         </div>
         <Misson />
+        <VideoCard />
       </div>
     </>
   );
