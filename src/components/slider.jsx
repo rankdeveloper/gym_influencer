@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import workout_graph from "../assets/img/workout_graph.avif";
+import skip_warm_up from "../assets/img/skip_warm_up.avif";
+import sample_plan from "../assets/img/sample_plan.avif";
+import personalized from "../assets/img/personalized.avif";
 
 const Vertical_Slider = () => {
   const splideRef = useRef(null);
@@ -8,19 +12,20 @@ const Vertical_Slider = () => {
   useEffect(() => {
     const splide = new Splide(splideRef.current, {
       type: "loop",
-      drag: "free",
+      drag: "false",
       focus: "center",
-      direction: "ttb", // Top to Bottom for vertical
-      height: "300px",
-      width: "400px",
+      direction: "ttb",
+      height: "350px",
+      width: "100%",
       perPage: 1,
       gap: "1rem",
       arrows: false,
       pagination: false,
-      autoplay: true, // Enable autoplay
-      interval: 1500, // Time between slides (2 seconds)
-      speed: 800, // Transition speed between slides
-      pauseOnHover: false, // Pause autoplay on hover
+      autoplay: true,
+      speed: 1.5,
+      interval: 1500,
+
+      pauseOnHover: false,
       breakpoints: {
         768: { perPage: 1 },
       },
@@ -31,18 +36,23 @@ const Vertical_Slider = () => {
     return () => splide.destroy();
   }, []);
 
+  const img = [workout_graph, skip_warm_up, sample_plan];
   return (
-    <div className="splide" ref={splideRef}>
-      <div className="splide__track">
-        <ul className="splide__list">
-          {[...Array(6)].map((_, index) => (
-            <li key={index} className="splide__slide  border-2 border-red-500">
-              <div className="p-6 bg-gray-800 text-white rounded-lg text-center">
-                <h3 className="text-xl font-bold">Slide {index + 1}</h3>
-              </div>
-            </li>
+    <div className="splide" ref={splideRef} style={{ border: "1px solid red" }}>
+      <div className="splide__track" style={{ border: "1px solid blue" }}>
+        <div className="splide__list">
+          {img.map((item, i) => (
+            <div
+              className="splide__slide"
+              key={i}
+              style={{
+                width: "100%",
+              }}
+            >
+              <img src={item} alt={item} />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
