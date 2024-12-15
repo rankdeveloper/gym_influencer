@@ -18,7 +18,7 @@ const VideoCard = () => {
   }, []);
 
   return (
-    <div className="mb-8 relative flex items-center justify-center h-[480px] bg-black">
+    <div className="mb-8  flex items-center justify-center  bg-black">
       <div
         className=" w-[65%] max-w-4xl rounded-lg overflow-hidden shadow-lg"
         ref={videoRef}
@@ -27,12 +27,12 @@ const VideoCard = () => {
           <iframe
             src="https://www.youtube.com/embed/pznrAWMhahA?autoplay=1&rel=0"
             title="YouTube Video"
-            className="w-full h-[400px] md:h-[480px]"
+            className="w-full relative h-[420px] "
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         ) : (
-          <div className="">
+          <div className="h-[420px] relative ">
             <img
               src={youtubeCover}
               alt="Video Thumbnail"

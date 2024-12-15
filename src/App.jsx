@@ -9,6 +9,7 @@ import VideoCard from "./components/videoCard";
 import Services from "./components/ourServices";
 import Benefits from "./components/benefits";
 import Vertical_Slider from "./components/slider";
+import Personalized_Hub from "./components/personalized_hub";
 
 export default function App() {
   return (
@@ -33,7 +34,7 @@ export default function App() {
         <VideoCard />
         <Services />
         <Benefits />
-        <Vertical_Slider />
+        <Personalized_Hub />
       </div>
     </>
   );
