@@ -22,7 +22,7 @@ const Marquee = () => {
           autoplay: true,
           interval: 0,
           speed: 75000,
-          drag: "false",
+          drag: false,
           arrows: false,
           pagination: false,
           perPage: 5,
@@ -35,20 +35,12 @@ const Marquee = () => {
       >
         {content.map((item, index) => (
           <SplideSlide key={index}>
-            <div
-              style={{
-                fontWeight: "bold",
-                fontSize: "16px",
-                textAlign: "center",
-                color: "white",
-              }}
-              className="flex items-center text-center font-normal text-sm leading-3 text-white "
-            >
+            <div className="flex items-center text-center font-normal !text-[12px] whitespace-nowrap leading-3 text-white ">
               <FontAwesomeIcon
                 icon={faCircle}
-                className="text-white mr-2 text-[5px]"
+                className="text-white mr-2 !text-[5px]"
               />
-              <span>{item}</span>
+              <span className="!text-[12px]">{item}</span>
             </div>
           </SplideSlide>
         ))}
