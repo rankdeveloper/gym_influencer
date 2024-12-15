@@ -11,6 +11,7 @@ import Benefits from "./components/benefits";
 import Vertical_Slider from "./components/slider";
 import Personalized_Hub from "./components/personalized_hub";
 import Marquee from "./components/marquee";
+import Transformation from "./components/Transformation";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Benefits />
         <Personalized_Hub />
         <Marquee />
+        <Transformation />
       </div>
     </>
   );
