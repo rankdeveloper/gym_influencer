@@ -16,6 +16,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "framer-motion": "^11.14.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.82.0"
