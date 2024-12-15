@@ -38,20 +38,26 @@ const Vertical_Slider = () => {
 
   const img = [workout_graph, skip_warm_up, sample_plan];
   return (
-    <div className="splide" ref={splideRef} style={{ border: "1px solid red" }}>
-      <div className="splide__track" style={{ border: "1px solid blue" }}>
-        <div className="splide__list">
-          {img.map((item, i) => (
-            <div
-              className="splide__slide"
-              key={i}
-              style={{
-                width: "100%",
-              }}
-            >
-              <img src={item} alt={item} />
-            </div>
-          ))}
+    <div className="vertical_slider">
+      <div
+        className="splide"
+        ref={splideRef}
+        style={{ border: "1px solid red" }}
+      >
+        <div className="splide__track" style={{ border: "1px solid blue" }}>
+          <div className="splide__list">
+            {img.map((item, i) => (
+              <div
+                className="splide__slide"
+                key={i}
+                style={{
+                  width: "100%",
+                }}
+              >
+                <img src={item} alt={item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

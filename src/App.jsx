@@ -10,6 +10,7 @@ import Services from "./components/ourServices";
 import Benefits from "./components/benefits";
 import Vertical_Slider from "./components/slider";
 import Personalized_Hub from "./components/personalized_hub";
+import Marquee from "./components/marquee";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         <Services />
         <Benefits />
         <Personalized_Hub />
+        <Marquee />
       </div>
     </>
   );

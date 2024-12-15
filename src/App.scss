@@ -70,25 +70,23 @@ $redText: #eb0000;
   z-index: 1;
 }
 
-/* Scaling effect for active slide */
-.splide__slide.is-active {
-  // transform: scale(1.5);
-  opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  z-index: 10; /* Bring the active slide above others */
-}
+.vertical_slider {
+  .splide__slide.is-active {
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 10;
+  }
 
-/* Styling for previous and next slides */
-.splide__slide.is-prev,
-.splide__slide.is-next {
-  transform: scale(0.8); /* Shrink the width and height */
-  opacity: 0.5; /* Reduce opacity */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.splide__slide {
-  transform: scale(1);
-  opacity: 1;
+  .splide__slide.is-prev,
+  .splide__slide.is-next {
+    transform: scale(0.8);
+    opacity: 0.5;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .splide__slide {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .personalized_hub {
