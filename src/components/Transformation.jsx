@@ -29,7 +29,7 @@ export default function Transformation() {
 
               <div className="flex justify-between items-center gap-20">
                 {/* Left Section */}
-                <div className="w-1/2 tranformation-left pl-4 py-8">
+                <div className="w-1/2 tranformation-left pl-8 py-8">
                   <div className="flex gap-16 items-center">
                     <div className="name flex flex-col text-white text-base leading-9 font-black border-l-[5px] border-[#eb0000] px-2">
                       <h2>Name</h2>

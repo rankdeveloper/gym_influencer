@@ -12,6 +12,7 @@ import Vertical_Slider from "./components/slider";
 import Personalized_Hub from "./components/personalized_hub";
 import Marquee from "./components/marquee";
 import Transformation from "./components/Transformation";
+import What_People_Say from "./components/what_people";
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
         <Personalized_Hub />
         <Marquee />
         <Transformation />
+        <What_People_Say />
       </div>
     </>
   );
