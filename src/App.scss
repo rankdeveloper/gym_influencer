@@ -57,6 +57,21 @@ $redText: #eb0000;
   position: relative;
 }
 
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+.banner * {
+  position: relative;
+  z-index: 2;
+}
+
 .black-opacity {
   background-color: #000;
   flex: none;
@@ -133,6 +148,52 @@ $redText: #eb0000;
   z-index: 1;
 }
 .tranformation-left * {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials {
+  background: url(./assets/img/what_people.avif);
+  background-repeat: no-repeat;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.testimonials * {
+  position: relative;
+  z-index: 2;
+}
+
+.faq {
+  background-color: #990000;
+  background: url(./assets/img/1.svg), url(./assets/img/1.svg);
+  background-repeat: no-repeat, no-repeat;
+  position: relative;
+  background-position: bottom left, top right;
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 3, 3, 0.7);
+  z-index: 1;
+}
+.faq * {
   position: relative;
   z-index: 2;
 }
