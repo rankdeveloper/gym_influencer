@@ -14,6 +14,7 @@ import Marquee from "./components/marquee";
 import Transformation from "./components/Transformation";
 import What_People_Say from "./components/what_people";
 import { FAQ } from "./components/FAQ";
+import Gym from "./components/gym";
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Marquee />
         <Transformation />
         <What_People_Say />
+        <Gym />
         <FAQ />
       </div>
     </>

@@ -12,6 +12,15 @@ import people1 from "./assets/img/what_people1.avif";
 import people2 from "./assets/img/what_people2.avif";
 import people3 from "./assets/img/what_people3.avif";
 
+//gym img
+import gym1 from "./assets/img/gym1.avif";
+import gym2 from "./assets/img/gym2.avif";
+import gym3 from "./assets/img/gym3.avif";
+import gym4 from "./assets/img/gym4.avif";
+import gym5 from "./assets/img/gym5.avif";
+import gym6 from "./assets/img/gym6.avif";
+import gym7 from "./assets/img/gym7.avif";
+
 export const personData = [
   {
     id: 1,
@@ -98,5 +107,73 @@ export const faqs = [
     question: "What features does the application offer?",
     answer:
       "We offer comprehensive workout tracking, nutrition planning, and progress monitoring.",
+  },
+];
+
+export const gyms = [
+  {
+    id: "1",
+    name: "Physc Gym Nerul 24/7",
+    image: gym1,
+    phone: "+91 1234567890",
+    address: " Nerul, Navi Mumbai, Maharashtra, 400706",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d15086.84530312852!2d73.016683!3d19.032438!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDAxJzU2LjgiTiA3M8KwMDEnMDAuMSJF!5e0!3m2!1sen!2sus!4v1734459176276!5m2!1sen!2sus",
+  },
+  {
+    id: "2",
+    name: "Iron Fitness",
+    image: gym2,
+    phone: "+91 1234567890",
+    address: "2801 14th St NW, Washington, DC 20009",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d15084.925421058208!2d73.065921!3d19.053563!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDAzJzEyLjgiTiA3M8KwMDMnNTcuMyJF!5e0!3m2!1sen!2sus!4v1734459256729!5m2!1sen!2sus",
+  },
+  {
+    id: "3",
+    name: "Hydropower Fitness & Gym",
+    image: gym3,
+    phone: "+91-22-0001-0211",
+    address: "28345 Industrial Blvd, Hayward, CA 94545",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d15955.44999535032!2d36.693236!3d-1.254175!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMTUnMTUuMCJTIDM2wrA0MSczNS43IkU!5e0!3m2!1sen!2sus!4v1734459317198!5m2!1sen!2sus",
+  },
+  {
+    id: "4",
+    name: "Yuva Fitness",
+    image: gym4,
+    phone: "+91 1234567890",
+    address: "Nerul, Navi Mumbai",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d124137.24721244365!2d80.06740051873598!3d13.517849258284897!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDMxJzQ0LjkiTiA4MMKwMDcnMDkuNyJF!5e0!3m2!1sen!2sus!4v1734459410022!5m2!1sen!2sus",
+  },
+
+  {
+    id: "5",
+    name: "Ozone The Gym",
+    image: gym5,
+    phone: "+91 1234567890",
+    address: "Nerul, Navi Mumbai",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d13319.186377973685!2d-112.07816!3d33.428547!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDI1JzQyLjgiTiAxMTLCsDA0JzQxLjQiVw!5e0!3m2!1sen!2sus!4v1734459472983!5m2!1sen!2sus",
+  },
+  {
+    id: "6",
+    name: "The Square Gym",
+    image: gym6,
+    phone: "+91 1234567890",
+    address: "Nerul, Navi Mumbai",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d13061.893070556383!2d-107.525709!3d35.069906!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDA0JzExLjciTiAxMDfCsDMxJzMyLjYiVw!5e0!3m2!1sen!2sus!4v1734459529834!5m2!1sen!2sus",
+  },
+
+  {
+    id: "7",
+    name: "Arnolds Total Fitness",
+    image: gym7,
+    phone: "+91 1234567890",
+    address: "Nerul, Navi Mumbai",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d12287.862883495052!2d-104.999573!3d39.650486!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDM5JzAxLjgiTiAxMDTCsDU5JzU4LjUiVw!5e0!3m2!1sen!2sus!4v1734459584984!5m2!1sen!2sus",
   },
 ];
