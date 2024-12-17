@@ -15,6 +15,7 @@ import Transformation from "./components/Transformation";
 import What_People_Say from "./components/what_people";
 import { FAQ } from "./components/FAQ";
 import Gym from "./components/gym";
+import Blog from "./components/blog";
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
         <Transformation />
         <What_People_Say />
         <Gym />
+        <Blog />
         <FAQ />
       </div>
     </>

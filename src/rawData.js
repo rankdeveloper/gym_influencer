@@ -21,6 +21,16 @@ import gym5 from "./assets/img/gym5.avif";
 import gym6 from "./assets/img/gym6.avif";
 import gym7 from "./assets/img/gym7.avif";
 
+//blog
+import blog1 from "./assets/img/blog1.avif";
+import blog2 from "./assets/img/blog2.avif";
+import blog3 from "./assets/img/blog3.avif";
+
+// user blog
+import b_user1 from "./assets/img/b_user1.avif";
+import b_user2 from "./assets/img/b_user2.avif";
+import b_user3 from "./assets/img/b_user3.avif";
+
 export const personData = [
   {
     id: 1,
@@ -175,5 +185,40 @@ export const gyms = [
     address: "Nerul, Navi Mumbai",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d12287.862883495052!2d-104.999573!3d39.650486!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDM5JzAxLjgiTiAxMDTCsDU5JzU4LjUiVw!5e0!3m2!1sen!2sus!4v1734459584984!5m2!1sen!2sus",
+  },
+];
+
+export const blogData = [
+  {
+    id: 1,
+    isLarge: true,
+    title: "Conquering Consistency: How to Make Exercise a Habit You Love",
+    date: "Jun 28, 2024",
+    author: "Benjamin",
+    category: "Exercise",
+    btnColor: "bg-[#e02d2e]",
+    imageUrl: blog1,
+    b_user: b_user1,
+  },
+  {
+    id: 2,
+    title: "Weight Loss: A Sustainable Approach for a Healthier You",
+    date: "Jun 28, 2024",
+    author: "Jessica",
+    btnColor: "bg-[#e4660a]",
+    category: "Weight Loss",
+    imageUrl: blog2,
+    b_user: b_user2,
+  },
+
+  {
+    id: 3,
+    title: "Fuel Your Fitness: A Guide to Nutrition for Peak Performance",
+    date: "Jun 23, 2024",
+    author: "David",
+    category: "Nutrition",
+    btnColor: "bg-[#2a990b] ",
+    imageUrl: blog3,
+    b_user: b_user3,
   },
 ];
