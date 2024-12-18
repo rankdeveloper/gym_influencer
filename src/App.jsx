@@ -14,6 +14,7 @@ import Gym from "./components/gym";
 import Blog from "./components/blog";
 import Footer from "./components/footer";
 import Banner from "./components/banner";
+import Banner_Marquee from "./components/banner-marquee";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <div className="main-container ">
         <Header />
         <Banner />
+        <Banner_Marquee />
         <Misson />
         <VideoCard />
         <Services />

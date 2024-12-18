@@ -1,10 +1,22 @@
 import React from "react";
 import Trusted_user from "./trusted_user";
 import Banner_Marquee from "./banner-marquee";
+import { motion } from "framer-motion";
 export default function Banner() {
   return (
     <div className="banner  ">
-      <div className="absolute  top-1/4  bottom-1/2 !z-50">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 2,
+          type: "spring",
+          stiffness: 100,
+          staggerChildren: 0.5,
+          delayChildren: 0.5,
+        }}
+        className="absolute  top-1/4  bottom-1/2 "
+      >
         <Trusted_user />
         <h1 className="text-[#eb0000] text-7xl leading-normal font-black text-center px-20">
           Track Your Fitness Journey
@@ -14,9 +26,7 @@ export default function Banner() {
           log your workouts, count reps, and track calories burned. Stay
           motivated and achieve your goals with our user-friendly interface.
         </p>
-
-        <Banner_Marquee />
-      </div>
+      </motion.div>
     </div>
   );
 }
