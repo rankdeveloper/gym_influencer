@@ -26,7 +26,7 @@ const ContactButton = ({ email }) => {
   return (
     <a
       href={`mailto:${email}`}
-      className="flex items-center gap-2 px-6 py-3 bg-[#18181a] rounded-lg hover:bg-gray-700 transition-colors text-sm"
+      className="flex items-center gap-2 px-6 py-3 bg-[#18181a] rounded-lg hover:bg-gray-700 transition-colors text-sm second"
     >
       <Mail className="w-5 h-5 text-white " />
       <span className="text-gray-200">{email}</span>
@@ -59,7 +59,7 @@ const SocialLinks = () => {
           key={label}
           href={href}
           aria-label={label}
-          className="flex items-center justify-center text-[#bdbdbd] hover:text-white transition-colors p-2 rounded-md bg-[#18181a]"
+          className="flex items-center justify-center text-[#bdbdbd] hover:text-white transition-colors p-2 rounded-md bg-[#18181a] second"
         >
           <FontAwesomeIcon icon={Icon} className="w-6 h-6" />
         </a>

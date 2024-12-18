@@ -11,6 +11,10 @@ body {
   background-color: #000;
 }
 
+.second {
+  font-family: "Space Grotesk", serif !important;
+}
+
 $lightGray: rgb(150, 151, 156);
 $redText: #eb0000;
 
@@ -205,4 +209,34 @@ $redText: #eb0000;
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 90%;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marqueeRight {
+  display: flex;
+  width: 90%;
+  animation: marqueeRight 20s linear infinite;
 }

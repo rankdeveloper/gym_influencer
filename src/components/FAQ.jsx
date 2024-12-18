@@ -27,7 +27,7 @@ export function FAQ() {
 
 export function FaqItem({ question, answer, isOpen, onToggle }) {
   return (
-    <div className="mb-4 rounded-md !border !border-solid !border-white ">
+    <div className="mb-4 rounded-md !border !border-solid !border-white second">
       <button
         onClick={onToggle}
         className="w-full text-left flex items-center justify-items-start gap-2 bg-transparent px-6 py-4 "

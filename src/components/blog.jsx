@@ -23,7 +23,7 @@ const Blog = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <div className="absolute bottom-0 p-4 text-white">
                 <span
-                  className={`inline-block text-[#efefef] rounded ${item.btnColor} px-3 py-1 !text-sm font-semibold`}
+                  className={`inline-block second text-[#efefef] rounded ${item.btnColor} px-3 py-1 !text-sm font-semibold`}
                 >
                   {item.category}
                 </span>
@@ -34,7 +34,7 @@ const Blog = () => {
                 >
                   {item.title}
                 </h3>
-                <div className="mt-2 flex items-center gap-4 text-sm text-gray-300">
+                <div className="mt-2 second flex items-center gap-4 text-sm text-gray-300">
                   <div className="flex items-center gap-2">
                     <Calendar size={14} />
                     <span className="!text-sm text-[#dcdcdc]">{item.date}</span>

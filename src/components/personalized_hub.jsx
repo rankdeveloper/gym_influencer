@@ -9,7 +9,7 @@ export default function Personalized_Hub() {
           Your Personalized Fitness Hub
         </h2>
 
-        <div className="flex flex-col mt-10 gap-6 text-base text-[#efefef] leading-7 font-normal">
+        <div className="flex flex-col mt-10 gap-6 text-base text-[#efefef] leading-7 font-normal second">
           <p>
             Personalized workout routines tailored to your goals and preferences
           </p>

@@ -11,7 +11,7 @@ export default function Gym() {
       <h2 className="text-2xl font-bold mb-4 text-[#eb0000] uppercase text-center">
         Find Your Nearest Gym
       </h2>
-      <p className="text-xl leading-8 text-white mb-8 text-center">
+      <p className="text-xl leading-8 text-white mb-8 text-center second">
         Easily discover gyms near your location to kickstart
       </p>
       <div className="flex flex-col  lg:flex-row gap-6">
@@ -47,7 +47,7 @@ export default function Gym() {
 const GymCard = ({ id, name, image, phone, address, isSelected, onSelect }) => {
   return (
     <div
-      className={`flex cursor-pointer bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transition-all duration-300 ${
+      className={`second flex cursor-pointer bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transition-all duration-300 ${
         isSelected
           ? "border-2 border-[#ea0000] bg-[#ea0000]"
           : "border-2 border-transparent"

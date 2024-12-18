@@ -44,7 +44,7 @@ const What_People_Say = () => {
           <div className="splide__track">
             <div className="splide__list">
               {data.map((item, i) => (
-                <div className="splide__slide w-full" key={i}>
+                <div className="splide__slide w-full second" key={i}>
                   <TestimonialCard
                     name={item.name}
                     role={item.role}

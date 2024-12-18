@@ -26,10 +26,10 @@ export default function Services() {
   ];
   return (
     <div className="mt-5">
-      <h1 className="text-4xl font-extrabold text-[#eb0000] text-center">
+      <h1 className="text-4xl font-extrabold text-[#eb0000] text-center uppercase">
         Our Services
       </h1>
-      <p className="text-[#efefef] text-xl leading-8 text-center px-[20%] mt-5">
+      <p className="text-[#efefef] text-xl leading-8 text-center px-[20%] mt-5 second">
         GymFluencer offers 5 essential services to help you achieve your fitness
         go
       </p>

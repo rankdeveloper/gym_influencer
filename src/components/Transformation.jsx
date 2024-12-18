@@ -21,7 +21,7 @@ export default function Transformation() {
       {personData.map((item, i) => (
         <SplideSlide key={i}>
           <div className="splide__slide">
-            <div className="py-10">
+            <div className="py-10 second">
               <h1 className="text-3xl leading-10 text-[#eb0000] font-black break-words px-[20%] text-center mb-12 uppercase">
                 Transformations made
                 <br /> possible with GymFluencer
@@ -80,7 +80,7 @@ export default function Transformation() {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-1/2 flex gap-4">
+                <div className="w-1/2 flex gap-4 second">
                   <div className="h-72 w-52">
                     <img
                       src={item.before_url}

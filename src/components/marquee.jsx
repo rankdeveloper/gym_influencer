@@ -15,7 +15,10 @@ const Marquee = () => {
   ];
 
   return (
-    <div className="overflow-hidden bg-[#f33] p-4">
+    <div
+      className="overflow-hidden bg-[#f33] p-4"
+      style={{ border: "2px solid red;" }}
+    >
       <Splide
         options={{
           type: "loop",
@@ -35,7 +38,7 @@ const Marquee = () => {
       >
         {content.map((item, index) => (
           <SplideSlide key={index}>
-            <div className="flex items-center text-center font-normal !text-[12px] whitespace-nowrap leading-3 text-white ">
+            <div className="flex items-center text-center font-normal !text-[12px] whitespace-nowrap leading-3 text-white second">
               <FontAwesomeIcon
                 icon={faCircle}
                 className="text-white mr-2 !text-[5px]"
