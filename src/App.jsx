@@ -16,6 +16,7 @@ import What_People_Say from "./components/what_people";
 import { FAQ } from "./components/FAQ";
 import Gym from "./components/gym";
 import Blog from "./components/blog";
+import Footer from "./components/footer";
 
 export default function App() {
   return (
@@ -47,6 +48,7 @@ export default function App() {
         <Gym />
         <Blog />
         <FAQ />
+        <Footer />
       </div>
     </>
   );
