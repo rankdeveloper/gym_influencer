@@ -185,6 +185,11 @@ $redText: #eb0000;
   background-repeat: no-repeat, no-repeat;
   position: relative;
   background-position: bottom left, top right;
+  @media screen and (max-width: 600px) {
+    // background-size: 50% 40%, 50% 40%;
+    background-size: 50% 50%;
+    background-position: left -60px bottom 40px, right -60px top 40px;
+  }
 }
 
 .faq::before {
