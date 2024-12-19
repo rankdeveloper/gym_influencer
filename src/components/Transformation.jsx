@@ -27,9 +27,9 @@ export default function Transformation() {
                 <br /> possible with GymFluencer
               </h1>
 
-              <div className="flex justify-between items-center gap-20">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-20">
                 {/* Left Section */}
-                <div className="w-1/2 tranformation-left pl-8 py-8">
+                <div className="w-full md:w-1/2 tranformation-left pl-8 py-8">
                   <div className="flex gap-16 items-center">
                     <div className="name flex flex-col text-white text-base leading-9 font-black border-l-[5px] border-[#eb0000] px-2">
                       <h2>Name</h2>
@@ -80,8 +80,8 @@ export default function Transformation() {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-1/2 flex gap-4 second">
-                  <div className="h-72 w-52">
+                <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 second">
+                  <div className="md:h-72 h-auto w-full md:w-52">
                     <img
                       src={item.before_url}
                       alt="Before"
@@ -92,7 +92,7 @@ export default function Transformation() {
                     </h4>
                   </div>
 
-                  <div className="h-72 w-52">
+                  <div className="md:h-72 h-auto w-full md:w-52">
                     <img
                       src={item.after_url}
                       alt="After"

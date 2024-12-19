@@ -9,8 +9,8 @@ export function FAQ() {
   };
 
   return (
-    <div className="w-full  px-[20%] py-20 faq sec-faq">
-      <h2 className="text-white text-4xl font-semibold leading-10 mb-8 uppercase text-center">
+    <div className="w-full px-[5%] md:px-[20%] md:py-20 py-10 faq sec-faq">
+      <h2 className="text-white md:text-4xl text-2xl font-semibold leading-10 mb-8 uppercase text-center">
         frequently <br></br> asked questions
       </h2>
       {faqs.map((faq, index) => (

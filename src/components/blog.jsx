@@ -4,14 +4,14 @@ import { blogData } from "../rawData";
 const Blog = () => {
   return (
     <main className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 lg:px-8">
-      <h2 className="uppercase text-4xl font-bold mb-10 text-center text-[#eb0000]">
+      <h2 className="uppercase md:text-4xl text-2xl font-bold md:mb-10 mb-6 text-center text-[#eb0000]">
         our latest blogs
       </h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 !h-[75vh]">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:!h-[75vh] !h-auto">
         {blogData.map((item, i) => (
           <div
             className={`relative overflow-hidden rounded-xl ${
-              item.isLarge ? "col-span-2 row-span-2" : ""
+              item.isLarge ? "md:col-span-2 md:row-span-2" : ""
             }`}
           >
             <div className="group relative h-full">

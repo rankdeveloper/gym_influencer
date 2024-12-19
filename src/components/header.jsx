@@ -26,14 +26,14 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="fixed flex top-0 left-0 right-0 w-[90%] z-50 border-gray h-auto mx-auto">
-      <header className="!mx-auto mt-8 text-[#96979c] border rounded-[5rem] xl max-w-4xl header items-center relative">
+    <div className="fixed flex top-0 left-0 right-0 w-full md:w-[90%] z-50 border-gray h-auto mx-auto">
+      <header className=" md:!mx-auto mt-8 text-[#96979c] border rounded-[5rem] xl max-w-4xl header items-center relative">
         <nav className="container flex justify-between p-2 items-center">
           <div className="flex items-center space-x-2 h-9 w-36">
             <img src={logo} alt="Gymfluencer Logo" />
           </div>
 
-          <ul className="flex items-center space-x-8 text-sm font-medium">
+          <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
             <li className="hover:text-red-500 cursor-pointer">Home</li>
             <li className="hover:text-red-500 cursor-pointer">About</li>
 

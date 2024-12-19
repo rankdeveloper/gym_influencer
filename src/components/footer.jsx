@@ -10,9 +10,9 @@ import logo from "../assets/img/logo.svg";
 
 export default function Footer() {
   return (
-    <header className="flex flex-col items-center gap-8 py-8">
+    <header className="flex flex-col items-center gap-8 md:py-8 pt-8 px-[5%] md:px-0">
       <Logo />
-      <h2 className="text-base text-[#bdbdbd] ">
+      <h2 className="text-base text-[#bdbdbd] text-center md:text-left">
         Where Fitness Meets Social Connection!
       </h2>
       <ContactButton email="hello@gym.birlaventures.com" />
@@ -70,9 +70,9 @@ const SocialLinks = () => {
 
 const F_bottom = () => {
   return (
-    <footer className="mt-auto py-6 border-t border-[#18181a] w-[90%]">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <p className="text-[#bdbdbd] font-tech text-base">
+    <footer className="mt-auto py-6 border-t border-[#18181a] md:w-[90%] ">
+      <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center">
+        <p className="text-[#bdbdbd] text-sm md:text-base text-center md:text-left mt-4 md:mt-0">
           © 2024 GymFluencer. All rights reserved.
         </p>
         <SocialLinks />
@@ -83,8 +83,8 @@ const F_bottom = () => {
 
 const Logo = () => {
   return (
-    <div className="flex items-center gap-2">
-      <div className="h-12 w-full">
+    <div className="flex items-center justify-center ">
+      <div className="md:h-12 md:w-full w-[45%]">
         <img src={logo} alt="logo" className="w-full h-full" />
       </div>
     </div>
@@ -101,7 +101,7 @@ const Navigation = () => {
 
   return (
     <nav>
-      <ul className="flex items-center text-base gap-8">
+      <ul className="flex flex-wrap md:flex-nowrap items-center text-base md:gap-8 gap-6  px-[10%] md:px-0 justify-center md:justify-between">
         {links.map((link) => (
           <li key={link.href}>
             <NavLink href={link.href}>{link.label}</NavLink>

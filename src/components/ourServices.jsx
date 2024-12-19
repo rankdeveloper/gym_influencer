@@ -25,16 +25,16 @@ export default function Services() {
     },
   ];
   return (
-    <div className="mt-5">
-      <h1 className="text-4xl font-extrabold text-[#eb0000] text-center uppercase">
+    <div className="py-10 md:py-5">
+      <h1 className="text-2xl md:text-4xl font-extrabold text-[#eb0000] text-center uppercase">
         Our Services
       </h1>
-      <p className="text-[#efefef] text-xl leading-8 text-center px-[20%] mt-5 second">
+      <p className="text-[#efefef] text-base md:text-xl leading-8 text-center px-auto md:px-[20%] py-5 second">
         GymFluencer offers 5 essential services to help you achieve your fitness
-        go
+        goals with ease and flexibility. go
       </p>
 
-      <div className="flex my-5">
+      <div className="flex flex-col sm:flex-row my-5">
         {activities.map((item, index) => (
           <FitnessPanel key={index} text={item.text} imageUrl={item.imageUrl} />
         ))}
@@ -44,13 +44,13 @@ export default function Services() {
 }
 
 const FitnessPanel = ({ activity, text, imageUrl }) => (
-  <div className="relative w-1/5 h-80 bg-gray-200 flex items-center justify-center">
+  <div className="relative w-full md:w-1/5 md:h-80 h-52 bg-gray-200 items-center justify-center">
     <img
       src={imageUrl}
       alt={activity}
-      className="absolute inset-0 w-full h-full object-cover "
+      className="absolute md:inset-0 w-full h-full object-cover "
     />
-    <div className="relative z-10 text-white text-center">
+    <div className="relative z-10 text-white text-center py-24 md:py-0">
       <p className="text-lg font-bold">{text}</p>
     </div>
   </div>

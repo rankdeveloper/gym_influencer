@@ -26,7 +26,7 @@ const What_People_Say = () => {
       pauseOnHover: false,
 
       breakpoints: {
-        768: { perPage: 1 },
+        400: { perPage: 1, speed: 85000 },
       },
     });
 

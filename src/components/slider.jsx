@@ -27,7 +27,7 @@ const Vertical_Slider = () => {
 
       pauseOnHover: false,
       breakpoints: {
-        768: { perPage: 1 },
+        400: { height: "300px" },
       },
     });
 
