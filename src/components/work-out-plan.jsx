@@ -26,7 +26,7 @@ function Workout_Plan() {
 
   return (
     <div className="min-h-screen">
-      <main className="md:pt-44 xl:pt-44 px-4 container mx-auto">
+      <main className="md:pt-44 xl:pt-44 pt-36 px-4 container mx-auto">
         <div className="text-center max-w-3xl md:max-w-4xl xl:max-w-4xl mx-auto space-y-12">
           <motion.div
             variants={containerVariants}

@@ -5,7 +5,7 @@ import ContactForm from "./contact-form";
 
 function Contact() {
   return (
-    <div className="flex justify-center items-center relative">
+    <div id="contact" className="flex justify-center items-center relative">
       <div className=" max-w-3xl md:max-w-4xl xl:max-w-4xl mx-auto   bg-black text-white border border-red-500 py-12">
         <div
           className="absolute inset-0 z-0"

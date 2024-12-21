@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import logo from "../assets/img/h_logo.svg";
+import { Link } from "react-scroll";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +18,28 @@ export default function Header() {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
-  const mNav = ["Home", "About", "Services", "Blogs", "Contact"];
+  const mNav = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "#services",
+    },
+    {
+      name: "Services",
+      href: "/workout-plans",
+    },
+    {
+      name: "Blogs",
+      href: "#blogs",
+    },
+    {
+      name: "Contact",
+      href: "#faq",
+    },
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -51,8 +74,21 @@ export default function Header() {
 
             {/* for desktop */}
             <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
-              <li className="hover:text-red-500 cursor-pointer">Home</li>
-              <li className="hover:text-red-500 cursor-pointer">About</li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <RouterLink to="/" className="no-underline">
+                  Home
+                </RouterLink>
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <Link
+                  to="services"
+                  smooth={true}
+                  duration={500}
+                  className="no-underline"
+                >
+                  About
+                </Link>
+              </li>
               <li className="relative" ref={dropdownRef}>
                 <span
                   onClick={toggleDropdown}
@@ -69,17 +105,45 @@ export default function Header() {
                   <div className="absolute left-0 min-w-[200px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg">
                     <ul className="flex flex-col space-y-2 p-4">
                       <li className="hover:text-red-500 cursor-pointer">
-                        Workout Plan
+                        <RouterLink
+                          to={"/workout-plans"}
+                          className="no-underline"
+                        >
+                          {" "}
+                          Workout Plan
+                        </RouterLink>
                       </li>
                       <li className="hover:text-red-500 cursor-pointer">
                         Diet Plan
+                        <RouterLink to={"/"} className="no-underline">
+                          {" "}
+                          Diet Plan
+                        </RouterLink>
                       </li>
                     </ul>
                   </div>
                 )}
               </li>
-              <li className="hover:text-red-500 cursor-pointer">Benefits</li>
-              <li className="hover:text-red-500 cursor-pointer">Blogs</li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <Link
+                  to="testimonials"
+                  smooth={true}
+                  duration={500}
+                  className="no-underline"
+                >
+                  Benefits
+                </Link>
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <Link
+                  to="blogs"
+                  smooth={true}
+                  duration={500}
+                  className="no-underline"
+                >
+                  Blogs
+                </Link>
+              </li>
               <li className="hover:text-red-500 cursor-pointer">Contact</li>
             </ul>
 
@@ -124,7 +188,7 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div
           ref={mobileDropDown}
-          className="fixed top-32 right-8 z-10 min-w-[150px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg"
+          className="fixed top-32 right-8 z-50 min-w-[150px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg"
         >
           <ul className="flex flex-col space-y-2 p-4">
             {mNav.map((item, index) => (
@@ -132,7 +196,9 @@ export default function Header() {
                 key={index}
                 className="hover:text-red-500 text-[#96979c] cursor-pointer text-base second"
               >
-                {item}
+                <RouterLink to={item.href} className="no-underline">
+                  {item.name}
+                </RouterLink>
               </li>
             ))}
           </ul>

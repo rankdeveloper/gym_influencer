@@ -33,7 +33,7 @@ const Blog = () => {
   };
 
   return (
-    <main className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 lg:px-8">
+    <main id="blogs" className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 lg:px-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}

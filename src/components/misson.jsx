@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import CounterNumber from "./counter";
 
 export default function Misson() {
   return (
-    <div className="p-10 px-auto md:px-[5.5rem]">
+    <div id="services" className="p-10 px-auto md:px-[5.5rem]">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,21 +29,27 @@ export default function Misson() {
 
       <div className="counter flex flex-col xl:flex-row md:flex-row justify-between items-center gap-3 text-[text-[#efefef] second">
         <div className="counter-item text-center sm:border-b md:border-b-0 md:border-r xl:border-r xl:border-b-0 border-[#1d1d20] px-4 py-5 md:pb-0">
-          <h2 className="text-5xl mb-5 text-white">100k+</h2>
+          <h2 className="text-5xl mb-5 text-white">
+            <CounterNumber value={100} />k
+          </h2>
           <p className="text-sm text-[#797b85]">
             Workouts logged and progress tracked every month
           </p>
         </div>
 
         <div className="counter-item text-center sm:border-b md:border-r xl:border-r xl:border-b-0 md:border-b-0  border-[#1d1d20]  px-4 py-5 md:pb-0">
-          <h2 className="text-5xl mb-5 text-white">500k+</h2>
+          <h2 className="text-5xl mb-5 text-white">
+            <CounterNumber value={500} />k
+          </h2>
           <p className="text-sm text-[#797b85]">
             Fitness enthusiasts connected through our platform
           </p>
         </div>
 
         <div className="counter-item text-center  px-4 py-5 md:pb-0">
-          <h2 className="text-5xl mb-5 text-white">10+</h2>
+          <h2 className="text-5xl mb-5 text-white">
+            <CounterNumber value={10} />k
+          </h2>
           <p className="text-sm text-[#797b85]">
             Countries where GymFluencer is making an impact
           </p>

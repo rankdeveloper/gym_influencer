@@ -39,7 +39,10 @@ export function FAQ() {
   };
 
   return (
-    <div className="w-full px-[5%] md:px-[20%] md:py-20 py-10 faq sec-faq">
+    <div
+      id="faq"
+      className="w-full px-[5%] md:px-[20%] md:py-20 py-10 faq sec-faq"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}

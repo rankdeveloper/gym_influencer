@@ -2,7 +2,7 @@ import Trusted_user from "./trusted_user";
 import { motion } from "framer-motion";
 export default function Banner() {
   return (
-    <div className="banner  ">
+    <div id="home" className="banner  ">
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
