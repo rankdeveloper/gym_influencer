@@ -31,6 +31,12 @@ import b_user1 from "./assets/img/b_user1.avif";
 import b_user2 from "./assets/img/b_user2.avif";
 import b_user3 from "./assets/img/b_user3.avif";
 
+import track from "./assets/img/track.avif";
+import train from "./assets/img/train.avif";
+import challenge from "./assets/img/challenge.avif";
+import analyze from "./assets/img/analyzie.avif";
+import connect from "./assets/img/connect.avif";
+
 export const personData = [
   {
     id: 1,
@@ -220,5 +226,25 @@ export const blogData = [
     btnColor: "bg-[#2a990b] ",
     imageUrl: blog3,
     b_user: b_user3,
+  },
+];
+
+export const activities = [
+  { activity: "Rowing", text: "TRACK", imageUrl: track },
+  {
+    activity: "Weight Lifting",
+    text: "ANALYZE",
+    imageUrl: analyze,
+  },
+  { activity: "Yoga", text: "TRAIN", imageUrl: train },
+  {
+    activity: "Aerobics",
+    text: "CONNECT",
+    imageUrl: connect,
+  },
+  {
+    activity: "Swimming",
+    text: "CHALLENGE",
+    imageUrl: challenge,
   },
 ];
