@@ -1,5 +1,6 @@
 import React from "react";
 import "@splidejs/splide/css";
+import { motion } from "framer-motion";
 
 const Banner_Marquee = () => {
   const Ucontent = [
@@ -19,7 +20,12 @@ const Banner_Marquee = () => {
   ];
 
   return (
-    <div className="overflow-hidden bg-transparent py-5 mx-auto bottom-0 w-[90%]">
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      className="overflow-hidden bg-transparent py-5 mx-auto bottom-0 w-[90%]"
+    >
       <div className="flex items-center gap-8 animate-marquee">
         {Ucontent.concat(Ucontent).map((item, index) => (
           <div
@@ -40,7 +46,7 @@ const Banner_Marquee = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

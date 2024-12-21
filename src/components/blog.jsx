@@ -1,15 +1,56 @@
 import React from "react";
 import { Calendar } from "lucide-react";
 import { blogData } from "../rawData";
+import { delay, motion } from "framer-motion";
 const Blog = () => {
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1.5,
+      },
+    },
+  };
+
   return (
     <main className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 lg:px-8">
-      <h2 className="uppercase md:text-4xl text-2xl font-bold md:mb-10 mb-6 text-center text-[#eb0000]">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="uppercase md:text-4xl text-2xl font-bold md:mb-10 mb-6 text-center text-[#eb0000]"
+      >
         our latest blogs
-      </h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:!h-[75vh] !h-auto">
+      </motion.h2>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:!h-[75vh] !h-auto"
+      >
         {blogData.map((item, i) => (
           <div
+            variants={childVariants}
             className={`relative overflow-hidden rounded-xl ${
               item.isLarge ? "md:col-span-2 md:row-span-2" : ""
             }`}
@@ -54,7 +95,7 @@ const Blog = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 };

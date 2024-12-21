@@ -53,6 +53,7 @@ export default function Gym() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ amount: 0.3 }}
           className="w-full md:w-[60%] rounded-lg max-h-[550px] space-y-4 p-5 overflow-y-scroll scrollbar-hide  bg-[#121212]"
         >
           {gyms.map((gym) => (
