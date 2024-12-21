@@ -106,7 +106,7 @@ export default function Header() {
                     <ul className="flex flex-col space-y-2 p-4">
                       <li className="hover:text-red-500 cursor-pointer">
                         <RouterLink
-                          to={"/workout-plans"}
+                          to="/workout-plans"
                           className="no-underline"
                         >
                           {" "}
@@ -188,7 +188,7 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div
           ref={mobileDropDown}
-          className="fixed top-32 right-8 z-50 min-w-[150px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg"
+          className="fixed top-32 right-8 z-50 min-w-[200px] bg-[#141414] text-lightGray rounded-lg mt-2 shadow-lg"
         >
           <ul className="flex flex-col space-y-2 p-4">
             {mNav.map((item, index) => (
@@ -196,7 +196,11 @@ export default function Header() {
                 key={index}
                 className="hover:text-red-500 text-[#96979c] cursor-pointer text-base second"
               >
-                <RouterLink to={item.href} className="no-underline">
+                <RouterLink
+                  to={item.href}
+                  className="no-underline"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   {item.name}
                 </RouterLink>
               </li>
