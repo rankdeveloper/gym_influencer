@@ -248,3 +248,30 @@ export const activities = [
     imageUrl: challenge,
   },
 ];
+
+export const features = [
+  {
+    icon: "https://framerusercontent.com/images/AjjAxBc5v6SZHOkJzG2bwrSMk.svg",
+    title: "Effortless Workout Logging",
+    description:
+      "Easily log your workouts and monitor your progress over time with our intuitive logging feature.",
+  },
+  {
+    icon: "https://framerusercontent.com/images/pvxqwt0ZG86WIRPPnHxDCgV7rkQ.svg",
+    title: "Personalized Workout Plans",
+    description:
+      "AI-powered workout plans tailored to your fitness level, goals, and progress.",
+  },
+  {
+    icon: "https://framerusercontent.com/images/rxSlFR0RyaC3WCayigHX4RPQZs.svg",
+    title: "Accurate Rep Counting",
+    description:
+      "Count your reps accurately with our app, ensuring consistency and improved performance.",
+  },
+  {
+    icon: "https://framerusercontent.com/images/u8fjSIAgWQzhagulXkIoN7PzI.svg",
+    title: "Calorie Calculation & Personalized Diet Plans",
+    description:
+      "Calculate calories burned during workouts and AI-customized meal plans for optimal nutrition and wellness",
+  },
+];

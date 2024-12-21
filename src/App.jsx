@@ -15,6 +15,7 @@ import Blog from "./components/blog";
 import Footer from "./components/footer";
 import Banner from "./components/banner";
 import Banner_Marquee from "./components/banner-marquee";
+import Benefits from "./components/benefits";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Misson />
         <VideoCard />
         <Services />
+        <Benefits />
         <Personalized_Hub />
         <Marquee />
         <Transformation />
