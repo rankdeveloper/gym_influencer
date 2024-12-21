@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Menu, Dumbbell, Users, Brain, Target } from "lucide-react";
+import { Scale, Users } from "lucide-react";
+import { delay, motion } from "framer-motion";
+import {
+  childVariants,
+  containerVariants,
+  XchildVariants,
+  XcontainerVariants,
+} from "../animation-variants";
 
 function Workout_Plan() {
   const services = [
@@ -21,25 +28,47 @@ function Workout_Plan() {
     <div className="min-h-screen">
       <main className="md:pt-44 xl:pt-44 px-4 container mx-auto">
         <div className="text-center max-w-3xl md:max-w-4xl xl:max-w-4xl mx-auto space-y-12">
-          <div className="space-y-6">
-            <h1 className="text-2xl md:text-4xl xl:text-4xl font-bold text-[#eb0000] font-['Orbitron']">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="space-y-6"
+          >
+            <h1
+              variants={childVariants}
+              className="text-2xl md:text-4xl xl:text-4xl font-bold text-[#eb0000] font-['Orbitron']"
+            >
               WHAT IS THE WORKOUT PLAN
             </h1>
-            <p className="text-[#efefef] text-base md:text-lg xl:text-lg leading-8 second">
+            <p
+              variants={childVariants}
+              className="text-[#efefef] text-base md:text-lg xl:text-lg leading-8 second"
+            >
               A workout plan is a structured schedule of exercises designed to
               help you reach your fitness goals, stay active, and improve your
               health.
             </p>
-          </div>
+          </motion.div>
 
           <div className="md:space-y-12 xl:space-y-12 space-y-6">
-            <h2 className="text-2xl md:text-4xl xl:text-4xl font-bold text-[#eb0000] font-['Orbitron']">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="text-2xl md:text-4xl xl:text-4xl font-bold text-[#eb0000] font-['Orbitron']"
+            >
               WHAT WE OFFER:
-            </h2>
+            </motion.h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              variants={XcontainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="grid md:grid-cols-3 gap-8"
+            >
               {services.map((service, index) => (
-                <div
+                <motion.div
+                  variants={XchildVariants}
                   key={index}
                   className="p-6 rounded-lg 
                  transition-all duration-300"
@@ -52,9 +81,9 @@ function Workout_Plan() {
                       {service.title}
                     </h3>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </main>
