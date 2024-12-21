@@ -37,6 +37,11 @@ import challenge from "./assets/img/challenge.avif";
 import analyze from "./assets/img/analyzie.avif";
 import connect from "./assets/img/connect.avif";
 
+import wp1 from "./assets/img/wp1.avif";
+import wp2 from "./assets/img/wp2.avif";
+import wp3 from "./assets/img/wp3.avif";
+import wp4 from "./assets/img/wp4.avif";
+
 export const personData = [
   {
     id: 1,
@@ -273,5 +278,29 @@ export const features = [
     title: "Calorie Calculation & Personalized Diet Plans",
     description:
       "Calculate calories burned during workouts and AI-customized meal plans for optimal nutrition and wellness",
+  },
+];
+
+export const levels_list = [
+  {
+    title: "BEGINNER",
+    description:
+      "Start your fitness journey with simple and effective exercises.",
+    image: wp1,
+  },
+  {
+    title: "INTERMEDIATE",
+    description: "Start your fitness routine with more challenging exercises.",
+    image: wp2,
+  },
+  {
+    title: "ADVANCED",
+    description: "Push your limits with high-intensity and complex movements.",
+    image: wp3,
+  },
+  {
+    title: "Personalized Workout Plan",
+    description: "Create your own workout plan.",
+    image: wp4,
   },
 ];
