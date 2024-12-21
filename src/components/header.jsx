@@ -1,21 +1,36 @@
-import React, { useEffect, useRef, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown } from "lucide-react";
 import logo from "../assets/img/h_logo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const mobileDropDown = useRef(null);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const mNav = ["Home", "About", "Services", "Blogs", "Contact"];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current?.contains &&
+        !dropdownRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
+      }
+      if (
+        mobileDropDown.current?.contains &&
+        !mobileDropDown.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -26,55 +41,103 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="fixed flex top-0 left-0 right-0 w-full md:w-[90%] z-50 border-gray h-auto mx-auto">
-      <header className=" md:!mx-auto mt-8 text-[#96979c] border rounded-[5rem] xl max-w-4xl header items-center relative">
-        <nav className="container flex justify-between p-2 items-center">
-          <div className="flex items-center space-x-2 h-9 w-36">
-            <img src={logo} alt="Gymfluencer Logo" />
-          </div>
+    <>
+      <div className="fixed flex top-0 left-0 right-0 w-full items-center xl:items-center justify-center xl:justify-center md:w-[90%] xl:w-[90%] z-50 border-gray h-auto mx-auto">
+        <header className="!w-[90%] md:w-full xl:w-full md:!mx-auto xl:!mx-auto mt-8 text-[#96979c] border  md:rounded-[5rem] md:max-w-4xl xl:max-w-[1100px] header items-center relative bg-black md:bg-transparent">
+          <nav className="container flex justify-between p-3 md:p-3 xl:p-3 items-center">
+            <div className="flex items-center space-x-2 h-9 w-36">
+              <img src={logo} alt="Gymfluencer Logo" className="h-full" />
+            </div>
 
-          <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <li className="hover:text-red-500 cursor-pointer">Home</li>
-            <li className="hover:text-red-500 cursor-pointer">About</li>
+            {/* for desktop */}
+            <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
+              <li className="hover:text-red-500 cursor-pointer">Home</li>
+              <li className="hover:text-red-500 cursor-pointer">About</li>
+              <li className="relative" ref={dropdownRef}>
+                <span
+                  onClick={toggleDropdown}
+                  className="hover:text-red-500 cursor-pointer flex items-center"
+                >
+                  Our Services
+                  <ChevronDown
+                    className={`ml-1 h-4 w-4 transform transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </span>
+                {isOpen && (
+                  <div className="absolute left-0 min-w-[200px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg">
+                    <ul className="flex flex-col space-y-2 p-4">
+                      <li className="hover:text-red-500 cursor-pointer">
+                        Workout Plan
+                      </li>
+                      <li className="hover:text-red-500 cursor-pointer">
+                        Diet Plan
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">Benefits</li>
+              <li className="hover:text-red-500 cursor-pointer">Blogs</li>
+              <li className="hover:text-red-500 cursor-pointer">Contact</li>
+            </ul>
 
-            <li className="relative" ref={dropdownRef}>
-              <span
-                onClick={toggleDropdown}
-                className="hover:text-red-500 cursor-pointer flex items-center"
+            <div className="flex items-center gap-4">
+              <button className="hidden md:block bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-full font-bold">
+                Join us now
+              </button>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={toggleMobileMenu}
+                className="md:hidden text-white"
               >
-                Our Services
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className={`ml-1 transform ${
-                    isOpen ? "rotate-180" : "rotate-0"
-                  } transition-transform duration-300`}
-                />
-              </span>
+                {isMobileMenuOpen ? (
+                  <>
+                    <div className=" p-3 rounded-full bg-[#18181a]">
+                      <img
+                        className="h-6 w-6 object-cover"
+                        src="https://framerusercontent.com/images/tIEQjQ5QDx1TzUHLSEdkAOUig.svg
+"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className=" p-3 rounded-full bg-[#18181a]">
+                      <img
+                        className="h-6 w-6 object-cover"
+                        src="https://framerusercontent.com/images/tIEQjQ5QDx1TzUHLSEdkAOUig.svg
+"
+                      />
+                    </div>
+                  </>
+                )}
+              </button>
+            </div>
+          </nav>
+        </header>
+      </div>
 
-              {isOpen && (
-                <div className="absolute left-0 min-w-[200px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg">
-                  <ul className="flex flex-col space-y-2 p-4">
-                    <li className="hover:text-red-500 cursor-pointer">
-                      Workout Plan
-                    </li>
-                    <li className="hover:text-red-500 cursor-pointer">
-                      Diet Plan
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
-
-            <li className="hover:text-red-500 cursor-pointer">Benefits</li>
-            <li className="hover:text-red-500 cursor-pointer">Blogs</li>
-            <li className="hover:text-red-500 cursor-pointer">Contact</li>
+      {/* //for mbile    */}
+      {isMobileMenuOpen && (
+        <div
+          ref={mobileDropDown}
+          className="fixed top-32 right-8 z-10 min-w-[150px] bg-[#141414] text-lightGray rounded-md mt-2 shadow-lg"
+        >
+          <ul className="flex flex-col space-y-2 p-4">
+            {mNav.map((item, index) => (
+              <li
+                key={index}
+                className="hover:text-red-500 text-[#96979c] cursor-pointer text-base second"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
-
-          <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-full font-bold">
-            Join us now
-          </button>
-        </nav>
-      </header>
-    </div>
+        </div>
+      )}
+    </>
   );
 }
