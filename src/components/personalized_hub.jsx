@@ -3,7 +3,7 @@ import Vertical_Slider from "./slider";
 
 export default function Personalized_Hub() {
   return (
-    <div className="personalized_hub flex flex-col sm:flex-row gap-10 justify-between items-center px-14 py-10">
+    <div className="personalized_hub flex flex-col sm:flex-row gap-10 justify-between items-center px-14 py-10 absolute">
       <div className="md:w-1/2 w-full px-0 md:px-4">
         <h2 className="text-2xl md:text-4xl leading-10 font-extrabold text-[#eb0000] text-center md:text-left uppercase">
           Your Personalized Fitness Hub

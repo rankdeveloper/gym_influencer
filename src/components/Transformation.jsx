@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { personData } from "../rawData.js";
 // import "@splidejs/splide/dist/css/splide.min.css";
+import { motion } from "framer-motion";
+
 export default function Transformation() {
   return (
     <Splide
@@ -21,15 +23,49 @@ export default function Transformation() {
       {personData.map((item, i) => (
         <SplideSlide key={i}>
           <div className="splide__slide">
-            <div className="py-10 second">
-              <h1 className="text-3xl leading-10 text-[#eb0000] font-black break-words px-[20%] text-center mb-12 uppercase">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+                staggerChildren: 0.5,
+                delayChildren: 0.5,
+                type: "spring",
+                stiffness: 100,
+              }}
+              className="py-10 second"
+            >
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                whileInView={{ y: [100, 0], opacity: [0, 1] }}
+                className="text-3xl leading-10 text-[#eb0000] font-black break-words px-[20%] text-center mb-12 uppercase"
+              >
                 Transformations made
                 <br /> possible with GymFluencer
-              </h1>
+              </motion.h1>
 
               <div className="flex flex-col sm:flex-row justify-between items-center gap-20">
                 {/* Left Section */}
-                <div className="w-full md:w-1/2 tranformation-left pl-8 py-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 1,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  whileInView={{ y: [100, 0], opacity: [0, 1] }}
+                  className="w-full md:w-1/2 tranformation-left pl-8 py-8"
+                >
                   <div className="flex gap-16 items-center">
                     <div className="name flex flex-col text-white text-base leading-9 font-black border-l-[5px] border-[#eb0000] px-2">
                       <h2>Name</h2>
@@ -77,10 +113,21 @@ export default function Transformation() {
                       </tr>
                     </tbody>
                   </table>
-                </div>
+                </motion.div>
 
                 {/* Right Section */}
-                <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 second">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.5,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  whileInView={{ y: [100, 0], opacity: [0, 1] }}
+                  className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 second"
+                >
                   <div className="md:h-72 h-auto w-full md:w-52">
                     <img
                       src={item.before_url}
@@ -102,9 +149,9 @@ export default function Transformation() {
                       After
                     </h4>
                   </div>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </SplideSlide>
       ))}

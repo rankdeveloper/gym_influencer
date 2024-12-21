@@ -4,6 +4,7 @@ import { testimonialData as data } from "../rawData.js";
 
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { motion } from "framer-motion";
 
 const What_People_Say = () => {
   const splideRef = useRef(null);
@@ -26,7 +27,7 @@ const What_People_Say = () => {
       pauseOnHover: false,
 
       breakpoints: {
-        400: { perPage: 1, speed: 85000 },
+        430: { perPage: 1, speed: 20000 },
       },
     });
 
@@ -36,10 +37,28 @@ const What_People_Say = () => {
   }, []);
   return (
     <>
-      <div className="py-20 testimonials">
-        <h2 className="uppercase text-4xl text-bold text-white font-bold text-center pb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+          type: "spring",
+          stiffness: 100,
+          staggerChildren: 0.5,
+          delayChildren: 0.5,
+        }}
+        whileInView={{ y: [100, 0], opacity: [0, 1] }}
+        className="py-20 testimonials"
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1, stiffness: 100 }}
+          className="uppercase text-4xl text-bold text-white font-bold text-center pb-10"
+        >
           What people say
-        </h2>
+        </motion.h2>
         <div className="splide relative" ref={splideRef}>
           <div className="splide__track">
             <div className="splide__list">
@@ -57,7 +76,7 @@ const What_People_Say = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
