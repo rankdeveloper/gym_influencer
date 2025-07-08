@@ -94,9 +94,9 @@ const Logo = () => {
 const Navigation = () => {
   const links = [
     { href: "/", label: "Home" },
-    { href: "/workout-plan", label: "Workout Plan" },
-    { href: "/diet-plan", label: "Diet Plan" },
-    { href: "/faqs", label: "FAQ's" },
+    { href: "/workout-plans", label: "Workout Plan" },
+    { href: "/", label: "Diet Plan" },
+    { href: "/", label: "FAQ's" },
   ];
 
   return (
